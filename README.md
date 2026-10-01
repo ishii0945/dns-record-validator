@@ -41,3 +41,10 @@ mismatches. Those need a full zone view; this library deliberately doesn't.
 
 Exported names: `RecordError`, `Record`, `A`, `AAAA`, `MX`, `TXT`, `SRV`,
 `CNAME`, `SOA`, `validate`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
