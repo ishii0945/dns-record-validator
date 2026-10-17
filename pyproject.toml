@@ -1,6 +1,6 @@
 [project]
 name = "dns-record-validator"
-version = "0.1.0"
+version = "0.1.1"
 description = "Validate the syntax and field values of A, AAAA, MX, TXT, SRV, CNAME, and SOA resource records."
 requires-python = ">=3.10"
 dependencies = []
